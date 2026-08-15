@@ -1,0 +1,7 @@
+.sandak/
+target/
+sandak.lock
+*.o
+.env
+**/.env
+**/password.txt

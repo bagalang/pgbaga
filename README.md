@@ -3,6 +3,24 @@
 Native **PostgreSQL wire-protocol client** for Baga (frontend/backend protocol
 v3), built only on `std/` (`net`, `bytes`, `crypto`, `random`, `os`, `str`).
 
+This repository is the package. The compiler and `std` stay in the baga
+language monorepo. Check this tree out as `app-product/pgbaga` there
+(git submodule) so path deps and `-I app-product` keep working.
+
+## Checkout
+
+Inside a baga language clone:
+
+```bash
+git submodule update --init app-product/pgbaga
+# or, first time from a fresh baga tree without the submodule recorded:
+git clone git@github.com:bagalang/pgbaga.git app-product/pgbaga
+```
+
+`sandak.toml` keeps `std = { path = "../../std" }`. Consumers
+(`ormbaga`, `boilabaga`, `oauthbaga`, `bagadecimal`) still depend on
+`../pgbaga`. `tests/pg_test.baga` stays in baga.
+
 Architecture: [`ARCHITECTURE.md`](ARCHITECTURE.md). Plan: [`docs/PLAN.md`](docs/PLAN.md).
 
 ## What works
