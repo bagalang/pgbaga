@@ -121,3 +121,7 @@ Env: `PGHOST` `PGPORT` `PGUSER` `PGPASSWORD` `PGDATABASE` (defaults match
 - **SASLprep** — passwords as raw UTF-8; fine for ASCII.
 - **No LISTEN/NOTIFY dispatch** yet (reader buffer is preserved across queries).
 - Memory: leak-tolerant arena style like the rest of `std/` / app-product.
+
+## License
+
+[MIT](LICENSE) — Copyright (c) 2026 Dim Gigov.
